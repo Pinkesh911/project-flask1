@@ -27,7 +27,7 @@ def addData():
 
 @app.route("/")
 def index():
-    #addData()
+    addData()
     data = list(coll.find({}).sort("_id",pymongo.DESCENDING).limit(1))[0]
     data.pop("_id")
     print(data)
@@ -36,7 +36,7 @@ def index():
 
 @app.route("/google-charts/pie-chart")
 def google_pie_chart():
-    #addData()
+    addData()
     data = list(coll.find({}).sort("_id",pymongo.DESCENDING).limit(1))[0]
     data.pop("_id")
     print(data)
@@ -45,7 +45,7 @@ def google_pie_chart():
 
 @app.route("/google-charts/pie-chart3d")
 def google_pie_chart3d():
-    #addData()
+    addData()
     data = list(coll.find({}).sort("_id",pymongo.DESCENDING).limit(1))[0]
     data.pop("_id")
     print(data)
@@ -54,7 +54,7 @@ def google_pie_chart3d():
 
 @app.route("/google-charts/column-chart")
 def google_column_chart():
-    #addData()
+    addData()
     data = list(coll.find({}).sort("_id",pymongo.DESCENDING).limit(1))[0]
     data.pop("_id")
     print(data)
