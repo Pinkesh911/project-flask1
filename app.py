@@ -62,7 +62,7 @@ def google_column_chart():
 
 @app.route("/google-charts/donut-chart")
 def google_donut_chart():
-    #addData()
+    addData()
     data = list(coll.find({}).sort("_id",pymongo.DESCENDING).limit(1))[0]
     data.pop("_id")
     print(data)
